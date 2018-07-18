@@ -10,7 +10,7 @@ The following will describe how to install and configure the DigitalOcean blocks
   * [Spaces access keys](https://www.digitalocean.com/docs/spaces/how-to/administrative-access/)
   * Spaces bucket
   * Spaces bucket region
-* [Heptio Ark](https://heptio.github.io/ark/master/quickstart.html) prerequisites.
+* [Heptio Ark](https://heptio.github.io/ark/master/quickstart.html) prerequisites
 
 ### Install the plugin
 
