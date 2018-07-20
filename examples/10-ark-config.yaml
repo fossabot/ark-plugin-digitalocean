@@ -12,7 +12,7 @@ backupStorageProvider:
   config:
     region: <REGION>
     s3ForcePathStyle: "true"
-    s3Url: https://<YOUR_BUCKET>.<REGION>.digitaloceanspaces.com
+    s3Url: https://<REGION>.digitaloceanspaces.com
 backupSyncPeriod: 30m
 gcSyncPeriod: 30m
 scheduleSyncPeriod: 1m

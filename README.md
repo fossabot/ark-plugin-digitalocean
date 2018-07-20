@@ -57,13 +57,13 @@ The following will describe how to install and configure the DigitalOcean blocks
 
 ### Backup and restore example
 
-1. First apply the example Nginx config that uses persistent storage for the log path.
+1. Apply the Nginx `example/nginx-pv.yml` config that uses persistent storage for the log path.
 
     ```
-    kubectl apply -f examples/nginx-pv.yml
+    kubectl apply -f nginx-pv.yml
     ```
 
-2. Once `nginx-example` is running and available, create a backup using Ark.
+2. Once Nginx deployment is running and available, create a backup using Ark.
 
     ```
     ark backup create nginx-backup --selector app=nginx
