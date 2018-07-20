@@ -4,7 +4,7 @@ The following will describe how to install and configure the DigitalOcean blocks
 
 ### Prerequisites
 
-* Kubernetes cluster
+* [Kubernetes cluster](https://stackpoint.io/clusters/new?provider=do)
 * DigitalOcean account and resources
   * [API personal access token](https://www.digitalocean.com/docs/api/create-personal-access-token/)
   * [Spaces access keys](https://www.digitalocean.com/docs/spaces/how-to/administrative-access/)
