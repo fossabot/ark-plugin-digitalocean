@@ -17,7 +17,7 @@ The following will describe how to install and configure the DigitalOcean blocks
 1. Complete the Heptio Ark prerequisites mentioned above. This generally involves apply the `00-prereqs.yaml` available in the Ark repository:
 
     ```
-    kubectl apply -f 00-prereqs.yaml
+    kubectl apply -f examples/00-prereqs.yaml
     ```
 
 2. Update the `examples/credentials-ark` with your Spaces access and secret keys. The file will look like the following:
@@ -33,20 +33,20 @@ The following will describe how to install and configure the DigitalOcean blocks
     ```
     kubectl create secret generic cloud-credentials \
         --namespace heptio-ark \
-        --from-file cloud=credentials-ark \
+        --from-file cloud=examples/credentials-ark \
         --from-literal digitalocean_token=<DIGITALOCEAN_TOKEN>
     ```
 
-4. Update the `example/10-ark-config.yaml` with the Spaces API URL, bucket, and region and apply the configuration:
+4. Update the `examples/10-ark-config.yaml` with the Spaces API URL, bucket, and region and apply the configuration:
 
     ```
-    kubectl apply -f 10-ark-config.yaml
+    kubectl apply -f examples/10-ark-config.yaml
     ```
 
 5. Now apply the Ark deployment.
 
     ```
-    kubectl apply -f 20-deployment.yaml
+    kubectl apply -f examples/20-deployment.yaml
     ```
 
 6. Finally add the `ark-blockstore-digitalocean` plugin to Ark.
@@ -57,10 +57,10 @@ The following will describe how to install and configure the DigitalOcean blocks
 
 ### Backup and restore example
 
-1. Apply the Nginx `example/nginx-pv.yml` config that uses persistent storage for the log path.
+1. Apply the Nginx `examples/nginx-pv.yml` config that uses persistent storage for the log path.
 
     ```
-    kubectl apply -f nginx-pv.yml
+    kubectl apply -f examples/nginx-pv.yml
     ```
 
 2. Once Nginx deployment is running and available, create a backup using Ark.
@@ -79,9 +79,12 @@ The following will describe how to install and configure the DigitalOcean blocks
 4. The `nginx-data` backup can now be restored.
 
     ```
-    ark restore create --from-backup nginx-data
+    ark restore create --from-backup nginx-backup
     ```
 
 ### Build container
 
+```
+make clean
 make container IMAGE=quay.io/stackpoint/ark-blockstore-digitalocean
+```
