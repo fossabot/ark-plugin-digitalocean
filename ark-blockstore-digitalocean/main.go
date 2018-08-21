@@ -93,9 +93,14 @@ func (b *BlockStore) IsVolumeReady(volumeID string, volumeAZ string) (bool, erro
 }
 
 func (b *BlockStore) CreateSnapshot(volumeID string, volumeAZ string, tags map[string]string) (string, error) {
+	var snapshotName string
+
+	suffix := "-" + uuid.NewV4().String()
+	snapshotName = "pvs-" + volumeID + suffix
+
 	createRequest := &godo.SnapshotCreateRequest{
 		VolumeID:    volumeID,
-		Name:        "pvs-" + volumeID,
+		Name:        snapshotName,
 		Description: "Ark snapshot of pv-" + volumeID,
 	}
 
