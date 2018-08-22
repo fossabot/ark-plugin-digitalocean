@@ -1,4 +1,6 @@
 ## Getting Started
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FStackPointCloud%2Fark-plugin-digitalocean.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FStackPointCloud%2Fark-plugin-digitalocean?ref=badge_shield)
+
 
 The following will describe how to install and configure the DigitalOcean blockstore plugin for Ark and provide a usage example.
 
@@ -88,3 +90,7 @@ The following will describe how to install and configure the DigitalOcean blocks
 make clean
 make container IMAGE=quay.io/stackpoint/ark-blockstore-digitalocean
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FStackPointCloud%2Fark-plugin-digitalocean.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FStackPointCloud%2Fark-plugin-digitalocean?ref=badge_large)
